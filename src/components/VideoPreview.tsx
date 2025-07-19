@@ -5,8 +5,10 @@ type VideoPreviewProps = {
 function VideoPreview({ file }: VideoPreviewProps) {
   return (
     <div className="video-preview">
-      {file && (
-        <video controls autoPlay src={URL.createObjectURL(file)} />
+      {file ? (
+        <video className="video-element" controls autoPlay src={URL.createObjectURL(file)} />
+      ) : (
+        <div className="video-placeholder">Waiting for camera access...</div>
       )}
     </div>
   )
