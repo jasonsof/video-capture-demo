@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
+
 import './App.css'
 import RecordButton from './components/RecordButton'
+import VideoPreview from './components/VideoPreview'
 import { getMediaRecorder } from './lib/mediaRecorder'
 
 function App() {
@@ -38,15 +40,13 @@ function App() {
   };
 
   return (
-    <>
-      {recordedFile && (
-        <video controls src={URL.createObjectURL(recordedFile)} />
-      )}
+    <div className='container'>
+      <VideoPreview file={recordedFile} />
       <RecordButton 
         state={mediaRecorderState}
         onClick={toggleRecording}
       />
-    </>
+    </div>
   )
 }
 

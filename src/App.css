@@ -4,6 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
 @keyframes readyToRecord {
   0% {
     opacity: 0.2;
@@ -19,21 +27,33 @@
 }
 
 .record-button {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  box-shadow:
+  0 4px 10px rgba(0, 0, 0, 0.5),
+  0 -1px 3px rgba(255, 255, 255, 0.915); /* brighter top highlight */
+
 }
 
 .record-button--ready {
-  outline: 4px auto #3b82f6;
+  outline: 8px auto #3b82f6;
   animation: readyToRecord 1.5s infinite;
 }
 
 .record-button--recording {
-  outline: 4px auto #3bf695;
+  outline: 8px auto #3bf695;
   animation: none;
 }
 
 .record-button--error {
-  outline: 4px auto #ef4444;
+  outline: 8px auto #ef4444;
+}
+
+.video-preview {
+  background: #222222;
+  border-radius: 8px;
+  padding: 24px;
+  width: 640px;
+  height: 480px;
 }
