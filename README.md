@@ -2,6 +2,8 @@
 
 A simple demo app to preview, record, and play back video using the [MediaStream Recording API](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API). Built with [Vite](https://vitejs.dev/) + React + TypeScript for learning and experimentation.
 
+> 🚀 [Live Demo](https://video-capture-demo.vercel.app/) — *(hosted version)*
+
 ## ✨ Features
 
 - Live webcam **preview**
