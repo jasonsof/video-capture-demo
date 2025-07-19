@@ -4,14 +4,31 @@ type RecordButtonProps = {
 }
 
 function RecordButton({ state, onClick }: RecordButtonProps) {
-  const stateClass = state === "recording"
-    ? "record-button--recording"
-    : "record-button--ready"
+  console.log("state =", state)
+
+  let stateClass;
+  switch(state) {
+    case "recording":
+      stateClass = "record-button--recording";
+      break;
+    case "ready":
+      stateClass = "record-button--ready";
+      break;
+    case "notready":
+      stateClass = "record-button--error";
+      break;
+  }
+
+  const handleClick = () => {
+    if(state === "notready") return
+
+    onClick()
+  }
 
   return (
     <button
       className={`record-button ${stateClass}`}
-      onClick={onClick}
+      onClick={handleClick}
     />
   )
 }
