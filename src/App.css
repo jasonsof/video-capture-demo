@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+@keyframes readyToRecord {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.record-button {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.record-button--ready {
+  outline: 4px auto #3b82f6;
+  animation: readyToRecord 1.5s infinite;
+}
+
+.record-button--recording {
+  outline: 4px auto #3bf695;
+  animation: none;
+}
+
+.record-button--error {
+  outline: 4px auto #ef4444;
+}
